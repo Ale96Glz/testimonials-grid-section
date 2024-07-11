@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 15px;
+  display: grid;
+  place-content: center;
+  background-color: hsl(210, 46%, 95%);
+}
+
+main {
+  max-width: 1200px;
+  display: grid;
+  grid-template-areas: "one" "two" "three" "four" "five";
+  gap: 15px;
+}
+
+article {
+  padding: 18px 25px;
+  border-radius: 10px;
+  box-shadow: 40px 60px 48px -48px hsla(217, 19%, 35%, 0.25);
+}
+article .header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+article .header img {
+  border-radius: 100px;
+  width: 30px;
+}
+article .dato h1 {
+  color: hsl(0, 0%, 81%);
+  font-size: 13px;
+  font-weight: 500;
+}
+article .dato p {
+  color: hsla(0, 0%, 81%, 0.5);
+}
+article .body {
+  margin-block-start: 15px;
+}
+article .body h1 {
+  color: hsl(0, 0%, 100%);
+  padding-inline-end: 42px;
+  font-weight: 600;
+}
+article .body p {
+  color: hsla(0, 0%, 81%, 0.7);
+  margin-block-start: 15px;
+  padding-inline-end: 25px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+article:nth-child(1) {
+  grid-area: one;
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+  z-index: -2;
+}
+
+article:nth-child(2) {
+  grid-area: two;
+  background-color: hsl(217, 19%, 35%);
+}
+
+article:nth-child(3) {
+  grid-area: three;
+  background-color: hsl(0, 0%, 100%);
+}
+article:nth-child(3) h1 {
+  color: hsl(217, 19%, 35%);
+}
+article:nth-child(3) .dato p {
+  color: hsla(0, 0%, 0.7%, 0.5);
+}
+article:nth-child(3) .body p {
+  color: hsla(0, 0%, 1%, 0.7);
+  font-weight: 600;
+}
+
+article:nth-child(4) {
+  grid-area: four;
+  background-color: hsl(219, 29%, 14%);
+}
+
+article:nth-child(5) {
+  grid-area: five;
+  background-color: hsl(0, 0%, 100%);
+}
+article:nth-child(5) h1 {
+  color: hsl(217, 19%, 35%);
+}
+article:nth-child(5) .dato p {
+  color: hsla(0, 0%, 0.7%, 0.5);
+}
+article:nth-child(5) .body p {
+  color: hsla(0, 0%, 1%, 0.7);
+  font-weight: 600;
+}
+
+.quote {
+  position: absolute;
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  width: 170px;
+  height: 120px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 528px) {
+  main {
+    grid-template-areas: "one one" "two three" "five five" "four four";
+  }
+}
+@media screen and (width >= 608px) {
+  main {
+    grid-template-areas: "one one" "two five" "three five" "four four";
+  }
+}
+@media screen and (width >= 864px) {
+  main {
+    grid-template-areas: "one one two" "five five five" "three four four";
+  }
+}
+@media screen and (width >= 1200px) {
+  main {
+    grid-template-areas: "one one two five" "three four four five";
+  }
+}/*# sourceMappingURL=main.css.map */
